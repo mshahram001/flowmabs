@@ -1,0 +1,160 @@
+<mat-toolbar color="primary" class="toolbar">
+    <div class="header-area">
+        <div class="left-header-area">
+            <button mat-button [matMenuTriggerFor]="products">Products</button>
+            <button mat-button [matMenuTriggerFor]="learn">Learn</button>
+            <button mat-button [matMenuTriggerFor]="support">Support</button>
+            <button mat-button [matMenuTriggerFor]="quality">Quality</button>
+            <button mat-button [matMenuTriggerFor]="aboutUs">About Us</button>
+            <button mat-button>Contact Us</button>
+            <button mat-button [matMenuTriggerFor]="customSolutions">Custom Solutions</button>
+
+            <!--Product Menu-->
+            <mat-menu #products="matMenu">
+                <table class="custom-table">
+                    <tr>
+                        <th>Product Type</th>
+                        <th>Application</th>
+                        <th>Research Area</th>
+                    </tr>
+                    <tr *ngFor="let row of tableData">
+                        <td class="header-table-text"><a href="" class="link-hover">{{ row.productType }}</a></td>
+                        <td class="header-table-text"><a href="" class="link-hover">{{ row.application }}</a></td>
+                        <td class="header-table-text"><a href="" class="link-hover">{{ row.researchArea }}</a></td>
+                    </tr>
+                </table>
+            </mat-menu>
+
+            <!--Learn Menu-->
+            <mat-menu #learn="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="areasOfResearch">Areas of Research</button>
+                <button mat-menu-item>Cell Biology</button>
+                <button mat-menu-item [matMenuTriggerFor]="phenotyping">Phenotyping</button>
+            </mat-menu>
+
+            <mat-menu #areasOfResearch="matMenu">
+                <button mat-menu-item>Immunology</button>
+                <button mat-menu-item>Cancer</button>
+                <button mat-menu-item>Stem Cells</button>
+                <button mat-menu-item>Neuroscience</button>
+                <button mat-menu-item>SARS-CoV-2</button>
+            </mat-menu>
+
+            <mat-menu #phenotyping="matMenu">
+                <button mat-menu-item>Cell Types</button>
+                <button mat-menu-item>Cell Markers</button>
+            </mat-menu>
+
+            <!--Support Menu-->
+            <mat-menu #support="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="productSupport">Product Support</button>
+                <button mat-menu-item [matMenuTriggerFor]="orderSupport">Order Support</button>
+                <button mat-menu-item [matMenuTriggerFor]="flowCytometryTools">FLow Cytometry Tools</button>
+                <button mat-menu-item>Literature, Pathways, & Supporters</button>
+            </mat-menu>
+
+            <mat-menu #productSupport="matMenu">
+                <button mat-menu-item>Protocols</button>
+                <button mat-menu-item>FAQs</button>
+                <button mat-menu-item>CoA Lookup Tools</button>
+                <button mat-menu-item>Safety Datasheets</button>
+            </mat-menu>
+
+            <mat-menu #orderSupport="matMenu">
+                <button mat-menu-item>Quick Order</button>
+                <button mat-menu-item>Worldwide Ordering</button>
+                <button mat-menu-item>Track Order</button>
+            </mat-menu>
+
+            <mat-menu #flowCytometryTools="matMenu">
+                <button mat-menu-item>Spectra Analyzers</button>
+                <button mat-menu-item>Panel Builders</button>
+            </mat-menu>
+
+            <!--Quality Menu-->
+            <mat-menu #quality="matMenu">
+                <button mat-menu-item>Quality Assurance & Certificates</button>
+                <button mat-menu-item>Product Development</button>
+                <button mat-menu-item>Quality Control</button>
+            </mat-menu>
+
+            <!--About Us Menu-->
+            <mat-menu #aboutUs="matMenu">
+                <button mat-menu-item>Our Company</button>
+                <button mat-menu-item [matMenuTriggerFor]="corporateSocialResponsibility">Corporate Social
+                    Responsibility</button>
+                <button mat-menu-item>Careers</button>
+                <button mat-menu-item>Promotions</button>
+                <button mat-menu-item>News and Events</button>
+                <button mat-menu-item>Blogs and Videos</button>
+            </mat-menu>
+
+            <mat-menu #corporateSocialResponsibility="matMenu">
+                <button mat-menu-item>Environamental Sustainibility</button>
+                <button mat-menu-item>Our People</button>
+                <button mat-menu-item>Giving</button>
+                <button mat-menu-item>Governance</button>
+            </mat-menu>
+
+
+            <!--Quality Menu-->
+            <mat-menu #customSolutions="matMenu">
+                <button mat-menu-item>Custom Reagents</button>
+                <button mat-menu-item>Custom Services</button>
+                <button mat-menu-item>Custom Requests Form</button>
+            </mat-menu>
+        </div>
+
+
+        <div class="right-header-area">
+            <button mat-button type="button" (click)="openLoginDialog()">
+                <i class="fa fa-sign-in-alt fa-lg" aria-hidden="true"></i> Login/Register
+            </button>
+            <button mat-button type="button" (click)="openCartDialog()">
+                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+
+<div class="second-header-area">
+    <div class="row">
+        <div class="col-xs-12 col-md-2">
+            <img class="company-logo" src="https://miro.medium.com/v2/resize:fit:1000/1*_719kxyjaeVaVNX4AO3gxA.jpeg">
+        </div>
+
+        <div class="col-xs-12 col-md-8 search-header">
+            <mat-form-field class="info-form-field password-field" appearance="outline">
+                <input type="text" placeholder="Search here..." aria-label="text" matInput [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    @for (option of filteredOptions | async; track option) {
+                    <mat-option [value]="option">{{option}}</mat-option>
+                    }
+                </mat-autocomplete>
+                <button type="button" mat-icon-button matSuffix class="tableAction-button"
+                    style="margin-right: 4px !important;">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-md-2 header-align-content"  (mouseenter)="openPanel()"
+            (mouseleave)="closePanelWithDelay()">
+            <span style="padding-right: 5px;">{{countryName}}</span>
+            <span>
+                <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+            </span>
+
+            <div *ngIf="isPanelVisible" class="panel">
+                <div *ngFor="let country of panelData" class="country-item" (click)="selectCountry(country)">
+                    <span class="country-flag">{{country.flag}}</span>
+                    <span class="country-name">{{country.name}}</span>
+                    <span class="country-currency">{{country.currency}}</span>
+                </div>
+
+                <p>If your country is not listed, click here for <a href=""><strong>Worldwide Ordering</strong></a></p>
+            </div>
+        </div>
+    </div>
+    </div>

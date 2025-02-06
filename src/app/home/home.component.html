@@ -1,0 +1,122 @@
+<div class="home-page-section1">
+    <div class="row">
+      <div class="col-xs-12 col-lg-3 col-md-3 col-sm-6" *ngFor="let item of headingName">
+        <div class="section-content">
+          <div class="title-container">
+            <h1>{{item.heading}}</h1>
+          </div>
+          <div class="content-container">
+            {{item.content}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paragraph-text table-responsive">
+    <h2>Research Areas</h2>
+  </div>
+
+  <div class="category-container">
+    <div class="category-item" *ngFor="let item of categories"
+         [ngClass]="{'expanded': hoveredItem === item}"
+         (mouseenter)="hoveredItem = item"
+         (mouseleave)="hoveredItem = null">
+
+      <!-- Image -->
+      <img [src]="item.image" alt="{{ item.name }}">
+
+      <!-- Default Name (Always Visible) -->
+      <div class="default-name">
+        {{ item.name }}
+      </div>
+
+      <!-- Content Box (Visible only on Hover) -->
+      <div class="content-box" *ngIf="hoveredItem === item">
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.description }}</p>
+        <button class="learn-more">LEARN MORE</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="signupContainer">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+        <div class="paragraph-text table-responsive">
+          <div class="signup-container">
+            <div class="signup-text">
+              Be the first to know about new products and promotions&nbsp;&nbsp;
+              <button mat-raised-button class="signup-button">Signup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="recently-viewed-container">
+    <div>
+      <div class="row">
+        <div class="recently-viewed-header col-12 d-flex justify-content-between align-items-center">
+          <span class="left-view-header">Previously Viewed Products</span>
+          <a class="clear-link" href="#">Clear</a>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="recently-view-container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 d-flex align-items-center">
+        <div class="recently-viewd-header justify-content-between">
+          <span class="left-view-header">Previously Viewed Products</span>
+          <span class="right-view-header"><a class="clear-link" href="#">Clear</a></span>
+        </div>
+      </div>
+      <div class="recently-viewd-product-container">
+        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
+          <div class="col-md-6 col-xs-6" style="padding: 0px;">
+            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
+            <hr />
+            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
+          </div>
+          <div class="col-xs-6 col-md-6" style="padding: 0px;">
+            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
+          <div class="col-md-6 col-xs-6" style="padding: 0px;">
+            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
+            <hr />
+            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
+          </div>
+          <div class="col-xs-6 col-md-6" style="padding: 0px;">
+            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
+          <div class="col-md-6 col-xs-6" style="padding: 0px;">
+            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
+            <hr />
+            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
+          </div>
+          <div class="col-xs-6 col-md-6" style="padding: 0px;">
+            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
+          <div class="col-md-6 col-xs-6" style="padding: 0px;">
+            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
+            <hr />
+            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
+          </div>
+          <div class="col-xs-6 col-md-6" style="padding: 0px;">
+            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

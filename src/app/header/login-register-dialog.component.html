@@ -1,0 +1,57 @@
+<div class="modules-container">
+    <mat-card-title class="popup-title">
+      <h4 class="SubHead" style="border-bottom-color: black; margin-bottom: 15px;">
+        <span style="color: black; font-size: 16px;">Login/Register</span>
+        <button class="spgeBack close-icon" [mat-dialog-close] matTooltip="Close" style="background: none; border: none; cursor: pointer; float: right;">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </h4>
+    </mat-card-title>
+  
+    <form [formGroup]="loginRegisterForm">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <mat-label>Email Address <span class="asterik-mark">*</span></mat-label>
+          <mat-form-field class="info-form-field" appearance="outline">
+            <input matInput type="email" placeholder="Type" formControlName="emailAddress" />
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <mat-label>Password <span class="asterik-mark">*</span></mat-label>
+          <mat-form-field class="info-form-field password-field" appearance="outline">
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Type" formControlName="password" />
+            <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()" class="tableAction-button" style="margin-right: 4px !important;">
+              <i class="fas" [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"></i>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+  
+  
+      <div class="checkbox-login">
+        <input type="checkbox" /><span class="checkbox-text">Remember Me</span>
+      </div>
+  
+      <div class="row button-container">
+        <div class="col-xs-12 col-md-12">
+          <button type="submit" mat-raised-button class="submit-button">
+            Login
+          </button>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <a href="">Forgot your password?</a>
+        </div>
+  
+        <div class="col-xs-12 col-md-6">
+          <span>Don't have an account?</span><a href="" class="signup-link">Signup</a>
+        </div>
+      </div>
+    </form>
+  
+  </div>

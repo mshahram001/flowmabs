@@ -1,0 +1,42 @@
+<div class="modules-container">
+    <mat-card-title class="popup-title">
+      <h4 class="SubHead" style="border-bottom-color: black; margin-bottom: 15px;">
+        <span style="color: black; font-size: 16px;">My Cart (1 Item)</span>
+        <button class="spgeBack close-icon" [mat-dialog-close] matTooltip="Close" style="background: none; border: none; cursor: pointer; float: right;">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </h4>
+    </mat-card-title>
+  
+    <table class="cart-table">
+      <tr>
+        <th style="width: 50%;">Products</th>
+        <th style="text-align: center;">Quantity</th>
+        <th style="text-align: right;">Price</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></td>
+        <td style="text-align: center;">1</td>
+        <td style="text-align: right;">{{productAmount | currency}}</td>
+      </tr>
+      <tr style="background-color: #f3f3f3;">
+        <td><strong>*SubTotal</strong></td>
+        <td></td>
+        <td style="text-align: right;">{{totalAmount | currency}}</td>
+      </tr>
+    </table>
+  
+    <div class="table-responsive cart-text">
+      <p>*Shipping, taxes and discounts calculated at checkout.</p>
+    </div>
+  
+    <div class="cart-button-container">
+      <button class="back-button" mat-raised-button type="button">
+        View Edit Cart
+      </button>
+      <button class="back-button" mat-raised-button type="submit">
+        Checkout
+      </button>
+    </div>
+  
+  </div>
