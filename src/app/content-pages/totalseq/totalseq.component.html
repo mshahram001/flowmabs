@@ -1,0 +1,43 @@
+<div class="totalseq-container">
+    <div class="row totalseq-row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 totalseq-header">
+            <h1>Multiomics and TotalSeq Reagents</h1>
+            <p>
+                Multiomics has transformed traditional sequencing experiments by providing unparalleled protein and
+                genetic analysis.
+                Explore the capabilities of our TotalSeq™ reagents and see how they seamlessly integrate into existing
+                workflows
+                to uncover what makes each cell unique.
+            </p>
+        </div>
+
+
+        <!-- <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+            <div class="card-container">
+                <div class="sub-card col-xs-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let card of cards">
+                    <img mat-card-image [src]="card.image" alt="{{ card.title }}" width="370" height="168">
+                    <h2 class="totalseq-container-header">{{ card.title }}</h2>
+                    <p class="totalseq-container-sub-header"><strong>{{ card.subtitle }}</strong></p>
+                    <p class="totalseq-container-sub-header">{{ card.description }}</p>
+                    <br>
+                    <a mat-button color="primary" [href]="card.link">{{ card.linkText }}</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+            <div class="card-container">
+                <div class="sub-card col-xs-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let card of cards">
+                    <img mat-card-image [src]="card.image" alt="{{ card.title }}">
+                    <div class="text-content">
+                        <h2 class="totalseq-container-header">{{ card.title }}</h2>
+                        <p class="totalseq-container-sub-header"><strong>{{ card.subtitle }}</strong></p>
+                        <p class="totalseq-container-sub-header">{{ card.description }}</p>
+                    </div>
+                    <a mat-button class="total-seq-link" color="primary" [href]="card.link">{{ card.linkText }}</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

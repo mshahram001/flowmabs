@@ -1,6 +1,7 @@
+<mat-card>
 <div class="home-page-section1">
     <div class="row">
-      <div class="col-xs-12 col-lg-3 col-md-3 col-sm-6" *ngFor="let item of headingName">
+      <div class="col-xs-12 col-lg-3 col-md-3 col-sm-6" *ngFor="let item of headingName" [routerLink]="item.link">
         <div class="section-content">
           <div class="title-container">
             <h1>{{item.heading}}</h1>
@@ -42,6 +43,7 @@
   </div>
 
 
+
   <div class="signupContainer">
     <div class="row">
       <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
@@ -56,67 +58,4 @@
       </div>
     </div>
   </div>
-
-  <!--<div class="recently-viewed-container">
-    <div>
-      <div class="row">
-        <div class="recently-viewed-header col-12 d-flex justify-content-between align-items-center">
-          <span class="left-view-header">Previously Viewed Products</span>
-          <a class="clear-link" href="#">Clear</a>
-        </div>
-      </div>
-    </div>
-  </div>-->
-
-  <div class="recently-view-container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12 d-flex align-items-center">
-        <div class="recently-viewd-header justify-content-between">
-          <span class="left-view-header">Previously Viewed Products</span>
-          <span class="right-view-header"><a class="clear-link" href="#">Clear</a></span>
-        </div>
-      </div>
-      <div class="recently-viewd-product-container">
-        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
-          <div class="col-md-6 col-xs-6" style="padding: 0px;">
-            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
-            <hr />
-            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
-          </div>
-          <div class="col-xs-6 col-md-6" style="padding: 0px;">
-            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
-          <div class="col-md-6 col-xs-6" style="padding: 0px;">
-            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
-            <hr />
-            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
-          </div>
-          <div class="col-xs-6 col-md-6" style="padding: 0px;">
-            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
-          <div class="col-md-6 col-xs-6" style="padding: 0px;">
-            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
-            <hr />
-            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
-          </div>
-          <div class="col-xs-6 col-md-6" style="padding: 0px;">
-            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3 recently-viewd-product-item">
-          <div class="col-md-6 col-xs-6" style="padding: 0px;">
-            <span><a href="" class="recent-product-text">Purified anti-β-Amyloid, x-42 Antibody</a></span>
-            <hr />
-            <span><strong>Clone: </strong><a href="" class="recent-product-text">{{cloneResult}}</a></span>
-          </div>
-          <div class="col-xs-6 col-md-6" style="padding: 0px;">
-            <img class="recent-product-img" src="https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</mat-card>

@@ -1,7 +1,14 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 import { Observable, map, startWith } from 'rxjs';
+
+export interface MenuItem {
+  label: string;
+  submenu?: MenuItem[];
+  link?: string;
+}
 
 @Component({
   selector: 'app-header',
@@ -13,10 +20,14 @@ export class HeaderComponent {
   myControl = new FormControl('');
   options: string[] = ['Product Support', 'FLow Cytometry Tools', 'Spectra Analyzers', 'Phenotyping'];
   filteredOptions: Observable<string[]>;
+  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
   countryName: string = 'United States';
   content: string = 'Achieve robust multiplexing in small sample pools and reduce experimental variability with TotalSeq™ hashtag reagents.';
   isPanelVisible = false;
   panelData: any = null;
+  @ViewChildren(MatMenu) menus!: QueryList<MatMenu>;
+  menuRefs: { [key: string]: MatMenu } = {};
+
   constructor(public dialog: MatDialog) {
 
   }
@@ -27,6 +38,7 @@ export class HeaderComponent {
       map(value => this._filter(value || '')),
     );
   }
+
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
@@ -58,57 +70,116 @@ export class HeaderComponent {
     this.countryName = country.name;  // Set the selected country name
     this.isPanelVisible = false;  // Close the panel after selection
   }
-
-  menuItems = [
-    { id: 1, label: 'Product', content: '' },
+  
+  menuData: MenuItem[] = [
     {
-      id: 2, label: 'Learn', content: '',
-      subItems: [
-        { id: 21, label: 'Areas of Research', options: ['Immunology', 'Cancer', 'Stem Cells', 'Neuroscience', 'SARS-CoV-2'] },
-        { id: 22, label: 'Cell Biology' },
-        { id: 23, label: 'Phenotyping', options: ['Cell Types', 'Cell Markers'] }
+      label: 'Products',
+      submenu: [
+        {
+          label: 'Product Type',
+          submenu: [
+            { label: 'Reagents', link: '/products/reagents' },
+            { label: 'Kits', link: '/products/kits' },
+            { label: 'Assays', link: '/products/assays' }
+          ]
+        },
+        {
+          label: 'Application',
+          submenu: [
+            { label: 'Flow Cytometry', link: '/products/flow-cytometry' },
+            { label: 'Western Blot', link: '/products/western-blot' },
+            { label: 'PCR', link: '/products/pcr' }
+          ]
+        },
+        {
+          label: 'Research Area',
+          submenu: [
+            { label: 'Cancer Research', link: '/products/cancer-research' },
+            { label: 'Immunology', link: '/products/immunology' },
+            { label: 'Neuroscience', link: '/products/neuroscience' }
+          ]
+        }
       ]
     },
     {
-      id: 3, label: 'Support', content: '',
-      subItems: [
-        { id: 31, label: 'Product Support', options: ['Protocols', 'FAQs', 'CoA Lookup Tools', 'Safety Datasheets'] },
-        { id: 32, label: 'Order Support', options: ['Quick Order', 'Worldwide Ordering', 'Track Order'] },
-        { id: 33, label: 'FLow Cytometry Tools', options: ['Spectra Analyzers', 'Panel Builders'] },
-        { id: 34, label: 'Literature, Pathways, & Supporters' },
+      label: 'Learn',
+      submenu: [
+        { label: 'Areas of Research', submenu: [
+          { label: 'Immunology', link: '/learn/immunology' },
+          { label: 'Cancer', link: '/learn/cancer' },
+          { label: 'Stem Cells', link: '/learn/stem-cells' },
+          { label: 'Neuroscience', link: '/learn/neuroscience' },
+          { label: 'SARS-CoV-2', link: '/learn/sars-cov-2' }
+        ]},
+        { label: 'Cell Biology', link: '/learn/cell-biology' },
+        { label: 'Phenotyping', submenu: [
+          { label: 'Cell Types', link: '/learn/phenotyping/cell-types' },
+          { label: 'Cell Markers', link: '/learn/phenotyping/cell-markers' }
+        ]}
       ]
     },
     {
-      id: 4, label: 'Quality', content: '',
-      subItems: [
-        { id: 41, label: 'Quality Assurance & Certificates'},
-        { id: 42, label: 'Product Development'},
-        { id: 43, label: 'Quality Control'},
+      label: 'Support',
+      submenu: [
+        { label: 'Product Support', submenu: [
+          { label: 'Protocols', link: '/support/protocols' },
+          { label: 'FAQs', link: '/support/faqs' },
+          { label: 'CoA Lookup Tools', link: '/support/coa-lookup' },
+          { label: 'Safety Datasheets', link: '/support/safety-datasheets' }
+        ]},
+        { label: 'Order Support', submenu: [
+          { label: 'Quick Order', link: '/support/quick-order' },
+          { label: 'Worldwide Ordering', link: '/support/worldwide-ordering' },
+          { label: 'Track Order', link: '/support/track-order' }
+        ]},
+        { label: 'Flow Cytometry Tools', submenu: [
+          { label: 'Spectra Analyzers', link: '/support/flow-cytometry/spectra-analyzers' },
+          { label: 'Panel Builders', link: '/support/flow-cytometry/panel-builders' }
+        ]},
+        { label: 'Literature, Pathways, & Supporters', link: '/support/literature' }
       ]
     },
-
     {
-      id: 5, label: 'About Us', content: '',
-      subItems: [
-        { id: 51, label: 'Our Company' },
-        { id: 52, label: 'Corporate Social Responsibility', options: ['Environmental Sustainibility', 'Our People', 'Giving', 'Governance'] },
-        { id: 53, label: 'Careers' },
-        { id: 54, label: 'Promotions' },
-        { id: 55, label: 'News and Events' },
-        { id: 56, label: 'Blogs and Videos' },
+      label: 'Quality',
+      submenu: [
+        { label: 'Quality Assurance & Certificates', link: '/quality/assurance' },
+        { label: 'Product Development', link: '/quality/development' },
+        { label: 'Quality Control', link: '/quality/control' }
       ]
     },
-    { id: 6, label: 'Contact Us', content: 'Reach out to us' },
-
     {
-      id: 7, label: 'Custom Solutions', content: '',
-      subItems: [
-        { id: 71, label: 'Custom Reagents' },
-        { id: 72, label: 'Custom Services' },
-        { id: 73, label: 'Custom Requests Form' },
+      label: 'About Us',
+      submenu: [
+        { label: 'Our Company', link: '/about/company' },
+        { label: 'Corporate Social Responsibility', submenu: [
+          { label: 'Environmental Sustainability', link: '/about/csr/environment' },
+          { label: 'Our People', link: '/about/csr/people' },
+          { label: 'Giving', link: '/about/csr/giving' },
+          { label: 'Governance', link: '/about/csr/governance' }
+        ]},
+        { label: 'Careers', link: '/about/careers' },
+        { label: 'Promotions', link: '/about/promotions' },
+        { label: 'News and Events', link: '/about/news' },
+        { label: 'Blogs and Videos', link: '/about/blogs-videos' }
       ]
-    }
+    },
+    {
+      label: 'Custom Solutions',
+      submenu: [
+        { label: 'Custom Reagents', link: '/custom/reagents' },
+        { label: 'Custom Services', link: '/custom/services' },
+        { label: 'Custom Requests Form', link: '/custom/requests' }
+      ]
+    },
+    { label: 'Contact Us', link: '/contact' }
   ];
+  
+
+  ngAfterViewInit() {
+    this.menus.forEach(menu => {
+      this.menuRefs[menu['_elementRef'].nativeElement.getAttribute('id')] = menu;
+    });
+  }
 
   tableData = [
     { productType: 'Antibodies and Reagents', application: 'Flow Cytometry', researchArea: 'Immunology' },

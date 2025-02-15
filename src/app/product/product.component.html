@@ -1,0 +1,362 @@
+<div class="cellular-senescencekit-container">
+    <div class="row cellular-senescencekit-container-row">
+      <h1 class="col-xs-12 col-md-12 col-sm-12 col-lg-12 cellular-title">Cellular Senescence Kit Red</h1>
+    </div>
+    <section class="col-xs-12 col-md-12 col-sm-12">
+      <div class="product-navigation col-xs-12 col-md-3 col-sm-3 col-lg-3">
+        <ul>
+          <li class="active-item">
+            <a>Pricing & Availability</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('kit-contents-section')">Kit Contents</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('product-contents-section')">Product Details</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('antigen-contents-section')">Antigen Details</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('documentation-contents-section')">Documentation</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('reviews-contents-section')">Reviews</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('relatedProduct-contents-section')">Related Products</a>
+          </li>
+          <!--<li>
+            <a class="product-navigation-list-content">Related Pages & Pathways</a>
+          </li>
+          <li>
+            <a class="product-navigation-list-content">Related FAQs</a>
+          </li>-->
+          <li>
+            <a class="product-navigation-list-content" (click)="scrollToSection('certificate-contents-section')">Certificate of Analysis</a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="product-info col-xs-12 col-sm-9">
+        <div class="col-xs-8">
+          <dl class="col-xs-12">
+            <dt class="col-xs-4 col-sm-3 definition-list-padding">Regulatory Status</dt>
+            <dd class="col-xs-8 col-sm-9 definition-list-padding">RUO</dd>
+            <dt class="col-xs-4 col-sm-3 definition-list-padding">Other Names</dt>
+            <dd class="col-xs-8 col-sm-9 definition-list-padding">Senescence-associated beta-galactosidase</dd>
+            <dt class="col-xs-4 col-sm-3 definition-list-padding">Ave. Rating</dt>
+            <dd class="col-xs-8 col-sm-9 definition-list-padding">Submit a Review</dd>
+          </dl>
+  
+          <div class="order-now col-xs-8 col-sm-12">
+            <table class="order-now-table">
+              <tr>
+                <th>Cat #</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Check Availibility</th>
+                <th></th>
+                <th>Save</th>
+              </tr>
+              <tr>
+                <td>421934</td>
+                <td>100 Tests</td>
+                <td style="text-align: right;">{{price | currency}}</td>
+                <td>
+                  <input class="input-field-width" type="text" />
+                </td>
+                <td>
+                  <button mat-button type="button">
+                    <i class="fa fa-cubes fa-lg" aria-hidden="true"></i>
+                  </button>
+                </td>
+                <td>
+                  <button mat-raised-button type="button" class="cart-button">
+                    Add to cart
+                  </button>
+                </td>
+                <td>
+                  <button mat-button class="save-button">
+                    <i class="fa fa-heart-o fa-lg heart-icon" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+  
+          <div class="col-xs-12 col-sm-12">
+            <div class="title-div">
+              <span class="title">Description</span>
+              <p style="margin-bottom: 0px;">
+                Cellular senescence is a state of stable cell cycle arrest under which cells remain metabolically active, but no longer divide and do not respond to growth-promoting stimuli. It is triggered by a variety of cellular stressors, including environmental factors like ionizing radiation or exposure to chemotherapeutic drugs, oxidative stress, DNA damage, mitochondrial dysfunction, and oncogene activation. Senescence-Associated β-galactosidase (SA-β-gal), a result of altered lysosomal activity, is a hallmark of cellular senescence. Cellular Senescence Kit Red uses a fluorogenic beta-Gal substrate that readily enters into live cells, where it gets cleaved by SA-β-gal inside cells, generating strong red fluorescence. It provides higher sensitivity compared to X-gal staining, a colorimetric method widely available and used to detect Senescence-associated beta-galactosidase (SA-beta-gal) in senescent cells.
+              </p>
+              <a class="product-link">Product Details</a>
+              <div class="datasheet-button-div">
+                <button class="datasheet-button" mat-raised-button type="button">
+                  <i class="fa fa-file-pdf" aria-hidden="true" style="padding-right: 4px;"></i>Technical Data Sheet
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-xs-4">
+          <div class="image-viewer-container">
+            <div class="main-image">
+              <img [src]="selectedImage.src" alt="Main Image">
+            </div>
+  
+            <div class="content-container">
+              <div class="text-content">
+                <figcaption class="description">
+                  {{ selectedImage.text }}
+                </figcaption>
+              </div>
+  
+              <div class="thumbnail-container">
+                <img *ngFor="let image of images"
+                     [src]="image.src"
+                     alt="Thumbnail"
+                     (click)="changeImage(image)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="kit-contents-section" class="product-description-content kit-content col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Kit Contents</h2>
+            <dl class="col-xs-12" style="padding: 0px;">
+              <dt class="col-xs-3 definition-list-padding">Kit Contents</dt>
+              <dd class="col-xs-9 definition-list-padding">
+                <ul>
+                  <li>1 vial of lyophilized 100X Senescence Probe Red</li>
+                  <li>1 bottle (20 mL) of Senescence Assay Buffer</li>
+                  <li>1 vial (100 µL) of DMSO</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+  
+      <div id="product-contents-section" class="product-description-content product-details col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Product Details</h2>
+            <dl class="col-xs-12" style="padding: 0px;">
+              <dt class="col-xs-3 definition-list-padding">Verified Reactivity</dt>
+              <dd class="col-xs-9 definition-list-padding">Mouse, Human</dd>
+              <dt class="col-xs-3 definition-list-padding">Formulation</dt>
+              <dd class="col-xs-9 definition-list-padding">Each kit contains 1 vial of lyophilized 100X Senescence Probe Red, 1 bottle (20 mL) of Senescence Assay Buffer, 1 vial (100 µL) of DMSO.</dd>
+              <dt class="col-xs-3 definition-list-padding">Storage & Handling</dt>
+              <dd class="col-xs-9 definition-list-padding">The kit should be stored at < -15°C. All unused stock solutions should be divided into single-use aliquots and stored at < -15°C after preparation. <strong>Avoid repeated freeze-thaw cycles.</strong></dd>
+              <dt class="col-xs-3 definition-list-padding">Application</dt>
+              <dd class="col-xs-9 definition-list-padding">
+                <p style="margin-bottom: 0px;">
+                  <a class="product-link">FC - Quality tested</a>
+                </p>
+                <p style="margin-bottom: 0px;">
+                  <a class="product-link">
+                    Live cell imaging - Verified
+                  </a>
+                </p>
+              </dd>
+              <dt class="col-xs-3 definition-list-padding">Recommended Usage</dt>
+              <dd class="col-xs-9 definition-list-padding">Please refer to detailed protocol in application notes</dd>
+              <dt class="col-xs-3 definition-list-padding">Application Notes</dt>
+              <dd class="col-xs-9 definition-list-padding">
+                <p>
+                  <u><strong>Components:</strong></u>
+                </p>
+                <ul>
+                  <li>
+                    1 vial of lyophilized 100X Senescence Probe Red (beta-D-galactopyranoside)
+                    (Store at < -15°C and minimize light exposure. All unused stock solutions should be stored as single-use aliquots and stored at < -15°C. <strong>Avoid repeated freeze-thaw cycles</strong>).
+                  </li>
+                  <li>1 bottle (20 mL) of Senescence Assay Buffer (Store at < -15°C)</li>
+                  <li>1 vial (100 μL) of DMSO (Store at < -15°C)</li>
+                </ul>
+                <p>
+                  <u><strong>Required Materials Not Included:</strong></u>
+                </p>
+                <ul><li>Buffer: PBS</li></ul>
+                <p>
+                  <u><strong>Detection/Imaging Guidelines:</strong></u>
+                </p>
+                <ul>
+                  <li>Fluorescence microscope filter set: Cyanine3/TRITC filter set, recommend black wall/clear bottom plate</li>
+                  <li>
+                    Flow cytometry channel:
+                    <ul>
+                      <li>Excitation: 488 nm laser</li>
+                      <li>Emission: 575/26 nm filter</li>
+                      <li>Instrument specification(s): PE channel</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <u><strong>Assay Protocol:</strong></u>
+                  <br />
+                  <br />
+                  ​This kit provides enough reagents for 100 tests. A test is defined as 100 µL of Senescence Probe Red working solution for up to 1x10<sup>6</sup> cells.
+                </p>
+                <ol>
+                  <li>
+                    ​Preparation of stock solutions:
+                    <ul>
+                      <li>
+                        Add 100 µL of DMSO into lyophilized 100X Senescence Probe Red and mix well.
+                        <br />
+                        <strong>Note: </strong>Store the unused Senescence Probe Red stock solution at -20°C in single use aliquots.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    ​Preparation of working solutions:
+                    <ul>
+                      <li>
+                        Dilute 10 µL of 100X Senescence Probe Red stock solution with 1 mL of Senescence Assay Buffer to make Senescence Probe Red working solution. This can be used for 10 tests; each test will need 100 µL Senescence Probe Red working solution.
+                        <br />
+                        <strong>Note: </strong>Senescence Probe Red working solution should be used promptly.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+  
+                <p>
+                  <u><strong>Experimental Protocol:</strong></u>
+                </p>
+                <ol>
+                  <li>
+                    Treat your cell samples under desired experimental conditions.
+                    <br />
+                    <strong>Note: </strong>For selectively tracking β-Gal in live cells, cells can be treated with Bafilomycin A1 for blocking endogenous β-Gal. Optimum concentration of Bafilomycin A1 may vary depending on cell type (suggested range is 100 nM-10 mM).
+                  </li>
+                  <li>Gently wash the cells with Cell Staining Buffer (Cat. No. 420201) or PBS.</li>
+                  <li>Add 100 µL Senescence Probe Red working solution for up to 1x10<sup>6</sup> cells (for higher cell amounts, scale up accordingly). And incubate the samples at 37°C incubator for 15-45 minutes.</li>
+                  <li>Gently remove the Senescence Probe Red solution from cells and wash twice with Cell Staining Buffer (Cat. No. 420201) or PBS.</li>
+                  <li>Analyze samples: For flow cytometry, resuspend the cells in the Senescence Assay Buffer and monitor the fluorescence intensity on a flow cytometer using a 575/26 nm filter (PE channel). For live cell imaging, observe cells with inverted fluorescence microscope using a Cyanine3/TRITC filter set.</li>
+                </ol>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+  
+      <div id="antigen-contents-section" class="product-description-content antigen-details col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Antigen Details</h2>
+            <dl class="col-xs-12" style="padding: 0px;">
+              <dt class="col-xs-3 definition-list-padding">Distribution</dt>
+              <dd class="col-xs-9 definition-list-padding">Cytoplasmic</dd>
+              <dt class="col-xs-3 definition-list-padding">Function</dt>
+              <dd class="col-xs-9 definition-list-padding">Cellular Senescence activity</dd>
+              <dt class="col-xs-3 definition-list-padding">Biology Area</dt>
+              <dd class="col-xs-9 definition-list-padding">Cell Biology, Cell Cycle/DNA Replication, Cell Proliferation and Viability</dd>
+              <dt class="col-xs-3 definition-list-padding">Molecular Family</dt>
+              <dd class="col-xs-9 definition-list-padding">Enzymes and Regulators</dd>
+              <dt class="col-xs-3 definition-list-padding">Gene ID</dt>
+              <dd class="col-xs-9 definition-list-padding">NA</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+  
+      <div id="documentation-contents-section" class="product-description-content documentation col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Documentation</h2>
+            <ul>
+              <li>
+                <a href="" class="product-link">
+                  <i class="fa fa-file-pdf" aria-hidden="true" style="padding-right: 4px;"></i>Technical Data Sheet
+                </a>
+              </li>
+              <li>
+                <a href="" class="product-link">
+                  <i class="fa fa-certificate" aria-hidden="true" style="padding-right: 4px;"></i>Certificate of Analysis
+                </a>
+              </li>
+              <li>
+                <a href="" class="product-link">
+                  <i class="fa fa-certificate" aria-hidden="true" style="padding-right: 4px;"></i>Safety Data Sheet
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div id="reviews-contents-section" class="product-description-content product-review col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Reviews</h2>
+            <button mat-raised-button type="button" class="datasheet-button">
+              Review This Product
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div id="relatedProduct-contents-section" class="product-description-content product-review col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Related Products</h2>
+            <table class="related-product-table">
+              <tr>
+                <th>Description</th>
+                <th>Clone</th>
+                <th>Application</th>
+              </tr>
+              <tr>
+                <td>
+                  <a href="" class="related-product-table-link">Cell Staining Buffer</a>
+                </td>
+                <td></td>
+                <td>FC,ICC,ICFC</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="" class="related-product-table-link">RBC Lysis Buffer (10X)</a>
+                </td>
+                <td></td>
+                <td>FC</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="" class="related-product-table-link">Compensation Beads</a>
+                </td>
+                <td></td>
+                <td>FC</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+  
+      <div id="certificate-contents-section" class="product-description-content product-review col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-12">
+            <h2>Certificate of Analysis</h2>
+            <div class="col-xs-12 col-md-3">
+              <mat-label><strong>LOT#</strong></mat-label>
+              <mat-form-field appearance="outline" class="info-form-field">
+                <input matInput placeholder="Type" typeof="text" />
+              </mat-form-field>
+            </div>
+            <div class="col-xs-12 col-md-3 button-container">
+              <button mat-raised-button type="submit" class="cart-button">
+                <i class="fa fa-paper-plane" style="padding-right: 4px;"></i>Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

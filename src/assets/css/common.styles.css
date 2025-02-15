@@ -1,5 +1,11 @@
+
+
 body {
     font-family: 'Arimo', sans-serif;
+  }
+
+  .mat-card{
+    margin: 20px;
   }
 
 .SubHead{

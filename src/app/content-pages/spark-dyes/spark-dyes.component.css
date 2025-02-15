@@ -1,0 +1,143 @@
+.topbannerLink{
+    cursor: pointer;
+    background-color: #582c83;
+}
+
+.topbannerLink h1{
+    color: #fff;
+    margin: .5em 0;
+    font-size: 2rem;
+}
+
+.spark-dyes-container .spark-dyes-row{
+    margin: 0px 10px;
+}
+
+.relatedProductHeader{
+    font-size: 18px;
+    padding-top: 25px;
+    text-decoration: none;
+    color: #000;
+}
+
+.sideMenuLinks .relatedProductItem{
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4c0073;
+    display: block;
+}
+
+.sideMenuLinks .relatedProductItem:hover{
+    text-decoration: underline;
+}
+
+.sideMenuLinks{
+    padding: 15px 20px;
+    border-right: 1px solid #bcbcbc;
+}
+
+.relatedProductList{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.right-content-table{
+    width: 100%;
+}
+
+.right-table-list{
+    width: 15%;
+    vertical-align: top;
+}
+
+.spark-product{
+    color: #4c0073;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.spark-product:hover{
+    color: #502d7f;
+    background-color: #E6D7FF;
+}
+
+.spark-product.active{
+    color: #502d7f;
+    background-color: #E6D7FF;
+}
+
+.left-table-list{
+    width: 75%;
+    vertical-align: top;
+}
+
+.spark-product-active-header{
+    color: #4e2271;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.spark-product-active-content{
+    margin-left: 20px;
+}
+
+.learn-more {
+    background-color: #FFD700;
+  }
+
+  .spark-product-active-button{
+    display: flex;
+    justify-content: center;
+  }
+
+  .spark-product-active-image{
+    text-align: center;
+  }
+
+  .spark-product-active-image img{
+    width: 100%;
+    max-width: 667px;
+
+  }
+
+  .product-active-link-text{
+    color: #4c0073;
+  }
+
+  .spark-product-active-table{
+    width: 100%;
+  }
+
+  .spark-product-active-table th{
+    background-color: purple;
+    padding: 10px;
+    color: white;
+    font-weight: normal;
+    width: 33.33%;
+  }
+
+  .spark-b515 th{
+    width: fit-content;
+  }
+
+  .spark-product-active-table td{
+    padding: 10px;
+  }
+
+  .spark-yg-570-1{
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .spark-yg-570-2{
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .spark-product-active-image-yh-570{
+    display: flex;
+  }
