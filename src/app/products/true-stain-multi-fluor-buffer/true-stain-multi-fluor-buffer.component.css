@@ -2,8 +2,17 @@
     margin: 0px 10px;
 }
 
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
 .cellular-title{
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     margin: .67em 0;
     font-weight: bold;
 }
@@ -12,11 +21,12 @@
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 .product-navigation ul{
     list-style: none;
+    padding-left: 10px;
 }
 
 .product-navigation ul li{
@@ -30,16 +40,16 @@
 .product-navigation-list-content {
   color: #4e2683;
   text-decoration: none;
-  font-size: 1.4rem;
+  /* font-size: 1rem; */
 }
 
 .product-navigation-list-content:hover{
     text-decoration: underline;
 }
 
-.product-info{
+/* .product-info{
     margin-top: 35px;
-}
+} */
 
 
 .image-viewer-container {
@@ -79,10 +89,10 @@
 
   .text-content figcaption {
     color: #878787;
-    font-size: 12px;
-    font-size: 1.2rem;
+    /* font-size: 12px;
+    font-size: 1.2rem; */
     padding-top: 5px;
-    max-width: 170px;
+    max-width: 214px;
     text-align: left;
   }
 
@@ -137,7 +147,7 @@
 }
 
   .order-now-table th {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     color: #888;
     text-align: left;
     padding: 5px;
@@ -166,19 +176,20 @@
 .cart-button {
   background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7539c1), to(#401469));
   color: white !important;
+  font-weight: normal;
 }
 
 .heart-icon {
   transition: color 0.3s ease-in-out;
 }
 
-.save-button:hover .fa-heart-o::before {
+.save-button:hover .fa-heart::before {
   color: #4e2683;
   font-weight: 900;
 }
 
 .title{
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     font-weight: bold;
 }
 
@@ -188,7 +199,7 @@
 
 .product-link{
     color: #4e2683;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
 }
 
 .related-product-table-link {
@@ -233,7 +244,7 @@
 }
 
   .related-product-table th {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     color: #888;
     text-align: left;
     padding: 10px;
@@ -266,5 +277,19 @@
 }
 
 .button-container{
-    margin-top: 13px;
+    margin-top: 19px;
+    align-content: center;
+}
+
+.related-protocol ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.related-protocol ul li{
+  padding: 10px;
+}
+
+.related-protocol ul li:nth-child(odd){
+  background-color: #efefef;
 }

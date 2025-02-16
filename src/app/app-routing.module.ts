@@ -46,14 +46,13 @@ const routes: Routes = [
   {
     path: 'products/cellular-senescence-kit-red',
     component: LayoutComponent,
-    loadChildren: () => import('./products/cellular-senescence-kit-red/cellular-senescenece-kit-red-routing.module').then(m => m.CellularSenescenceKitRoutingModule),
+    loadChildren: () => import('./products/cellular-senescence-kit-red/cellular-senescence-kit-red-routing.module').then(m => m.CellularSenescenceKitRoutingModule),
     data: { breadcrumb: 'TotalSeq' }
   },
-
   {
-    path: 'product',
+    path: 'products/true-stain-multi-flour-buffer',
     component: LayoutComponent,
-    loadChildren: () => import('./product/product-routing.module').then(m => m.ProductRoutingModule),
+    loadChildren: () => import('./products/true-stain-multi-fluor-buffer/true-stain-multi-fluor-buffer-routing.module').then(m => m.TrueStainMultiFlourBufferRoutingModule),
     data: { breadcrumb: 'TotalSeq' }
   }
 ];

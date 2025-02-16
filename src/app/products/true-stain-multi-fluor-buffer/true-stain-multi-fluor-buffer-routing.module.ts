@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product.component';
+import { TrueStainMultiFluorBufferComponent } from './true-stain-multi-fluor-buffer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 const routes: Routes = [
-  { path: '', component: ProductComponent }
+  { path: '', component: TrueStainMultiFluorBufferComponent }
 ];
 
 @NgModule({
-  declarations: [ProductComponent],
+  declarations: [TrueStainMultiFluorBufferComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes), // Lazy-loaded routes
@@ -20,4 +20,5 @@ const routes: Routes = [
     MatInputModule
   ]
 })
-export class ProductRoutingModule { }
+export class TrueStainMultiFlourBufferRoutingModule { }
+

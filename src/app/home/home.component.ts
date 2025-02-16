@@ -20,8 +20,8 @@ export class HomeComponent {
   headingName = [
     { heading: 'Spark Plus Antibodies', content: 'Some content for Spark Plus Antibodies', link: '/home/spark-dyes' },
     { heading: 'TotalSeq™ Hashtags', content: 'Some content for TotalSeq Hashtags', link: '/home/totalseq' },
-    { heading: 'Cellular Senescence Kit Red', content: 'Some content for Cellular Senescence Kit Red', link: '/product'  },
-    { heading: 'True Stain Multi-Fluor Buffer', content: 'Some content for True Stain Multi-Fluor Buffer' }
+    { heading: 'Cellular Senescence Kit Red', content: 'Some content for Cellular Senescence Kit Red', link: '/products/cellular-senescence-kit-red'  },
+    { heading: 'True Stain Multi-Fluor Buffer', content: 'Some content for True Stain Multi-Fluor Buffer', link:'/products/true-stain-multi-flour-buffer' }
   ];
   content: string = 'Achieve robust multiplexing in small sample pools and reduce experimental variability with TotalSeq™ hashtag reagents.';
 
