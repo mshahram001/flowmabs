@@ -8,6 +8,14 @@ body {
     margin: 20px;
   }
 
+  .container-fluid div{
+    font-size: 13px;
+  }
+
+  .container-fluid table th td{
+    font-size: 13px;
+  }
+
 .SubHead{
     border-bottom: 1px solid black;
     padding: 4px 0px;
@@ -37,10 +45,12 @@ body {
 
 a{
 color: blue;
+cursor: pointer;
 }
 
 a:hover{
     color: #0086cb;
+    cursor: pointer;
 }
 
 .mat-mdc-raised-button.submit-button {
