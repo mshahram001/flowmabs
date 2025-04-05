@@ -101,23 +101,23 @@ export class HeaderComponent {
         }
       ]
     },
-    {
-      label: 'Learn',
-      submenu: [
-        { label: 'Areas of Research', submenu: [
-          { label: 'Immunology', link: '/learn/immunology' },
-          { label: 'Cancer', link: '/learn/cancer' },
-          { label: 'Stem Cells', link: '/learn/stem-cells' },
-          { label: 'Neuroscience', link: '/learn/neuroscience' },
-          { label: 'SARS-CoV-2', link: '/learn/sars-cov-2' }
-        ]},
-        { label: 'Cell Biology', link: '/learn/cell-biology' },
-        { label: 'Phenotyping', submenu: [
-          { label: 'Cell Types', link: '/learn/phenotyping/cell-types' },
-          { label: 'Cell Markers', link: '/learn/phenotyping/cell-markers' }
-        ]}
-      ]
-    },
+    // {
+    //   label: 'Learn',
+    //   submenu: [
+    //     { label: 'Areas of Research', submenu: [
+    //       { label: 'Immunology', link: '/learn/immunology' },
+    //       { label: 'Cancer', link: '/learn/cancer' },
+    //       { label: 'Stem Cells', link: '/learn/stem-cells' },
+    //       { label: 'Neuroscience', link: '/learn/neuroscience' },
+    //       { label: 'SARS-CoV-2', link: '/learn/sars-cov-2' }
+    //     ]},
+    //     { label: 'Cell Biology', link: '/learn/cell-biology' },
+    //     { label: 'Phenotyping', submenu: [
+    //       { label: 'Cell Types', link: '/learn/phenotyping/cell-types' },
+    //       { label: 'Cell Markers', link: '/learn/phenotyping/cell-markers' }
+    //     ]}
+    //   ]
+    // },
     {
       label: 'Support',
       submenu: [
@@ -139,14 +139,14 @@ export class HeaderComponent {
         { label: 'Literature, Pathways, & Supporters', link: '/support/literature' }
       ]
     },
-    {
-      label: 'Quality',
-      submenu: [
-        { label: 'Quality Assurance & Certificates', link: '/quality/assurance' },
-        { label: 'Product Development', link: '/quality/development' },
-        { label: 'Quality Control', link: '/quality/control' }
-      ]
-    },
+    // {
+    //   label: 'Quality',
+    //   submenu: [
+    //     { label: 'Quality Assurance & Certificates', link: '/quality/assurance' },
+    //     { label: 'Product Development', link: '/quality/development' },
+    //     { label: 'Quality Control', link: '/quality/control' }
+    //   ]
+    // },
     {
       label: 'About Us',
       submenu: [
@@ -163,14 +163,14 @@ export class HeaderComponent {
         { label: 'Blogs and Videos', link: '/about/blogs-videos' }
       ]
     },
-    {
-      label: 'Custom Solutions',
-      submenu: [
-        { label: 'Custom Reagents', link: '/custom/reagents' },
-        { label: 'Custom Services', link: '/custom/services' },
-        { label: 'Custom Requests Form', link: '/custom/requests' }
-      ]
-    },
+    // {
+    //   label: 'Custom Solutions',
+    //   submenu: [
+    //     { label: 'Custom Reagents', link: '/custom/reagents' },
+    //     { label: 'Custom Services', link: '/custom/services' },
+    //     { label: 'Custom Requests Form', link: '/custom/requests' }
+    //   ]
+    // },
     { label: 'Contact Us', link: '/contact' }
   ];
   

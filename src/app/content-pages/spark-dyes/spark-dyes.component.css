@@ -1,6 +1,6 @@
 .topbannerLink{
     cursor: pointer;
-    background-color: #582c83;
+    background-color: #f38c21;
 }
 
 .topbannerLink h1{
@@ -25,7 +25,7 @@
     margin-left: 10px;
     margin-top: 10px;
     text-decoration: none;
-    color: #4c0073;
+    color: #0088CC;
     display: block;
 }
 
@@ -53,19 +53,19 @@
 }
 
 .spark-product{
-    color: #4c0073;
+    color: #1a2e47;
     padding: 5px;
     cursor: pointer;
 }
 
 .spark-product:hover{
-    color: #502d7f;
-    background-color: #E6D7FF;
+    color: black;
+    background-color: #99DDFF;
 }
 
 .spark-product.active{
-    color: #502d7f;
-    background-color: #E6D7FF;
+    color: white;
+    background-color: #0088CC;
 }
 
 .left-table-list{
@@ -74,7 +74,7 @@
 }
 
 .spark-product-active-header{
-    color: #4e2271;
+    color: #2196f3;
     font-size: 18px;
     font-weight: bold;
     /* margin-top: 0px; */
@@ -105,7 +105,7 @@
   }
 
   .product-active-link-text{
-    color: #4c0073;
+    color: #2196f3;
   }
 
   .spark-product-active-table{
@@ -113,7 +113,7 @@
   }
 
   .spark-product-active-table th{
-    background-color: purple;
+    background-color: #2196f3;
     padding: 10px;
     color: white;
     font-weight: normal;

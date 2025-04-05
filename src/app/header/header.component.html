@@ -13,7 +13,8 @@
                                 {{ subItem.label }}
                             </button>
                             <mat-menu #subMenu="matMenu">
-                                <button mat-menu-item *ngFor="let subSubItem of subItem.submenu" [routerLink]="subSubItem.link">
+                                <button mat-menu-item *ngFor="let subSubItem of subItem.submenu"
+                                    [routerLink]="subSubItem.link">
                                     {{ subSubItem.label }}
                                 </button>
                             </mat-menu>
@@ -45,8 +46,8 @@
 
 <div class="second-header-area">
     <div class="row">
-        <div class="col-xs-12 col-md-2">
-            <img class="company-logo" src="https://miro.medium.com/v2/resize:fit:1000/1*_719kxyjaeVaVNX4AO3gxA.jpeg">
+        <div class="col-xs-12 col-md-2 company-div-logo">
+                <img class="company-logo" routerLink="/home" src="/assets/images/company-logo.png">
         </div>
 
         <div class="col-xs-12 col-md-8 search-header">
@@ -83,4 +84,4 @@
             </div>
         </div>
     </div>
-    </div>
+</div>

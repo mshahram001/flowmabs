@@ -289,7 +289,7 @@
     padding-top: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
-    background-color: #50247f;
+    background-color: #1a75c4;
   }
   
     .title-container h1 {
@@ -299,6 +299,7 @@
       min-height: 58px !important;
       vertical-align: top !important;
       color: #ffffff;
+      align-content: center;
     }
   
   .content-container {
@@ -335,7 +336,7 @@
     .paragraph-text h2 {
       font-size: 18px;
       font-weight: bold;
-      color: #4e2271;
+      color: #2196f3;
     }
   
   .category-container {

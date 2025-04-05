@@ -54,37 +54,38 @@ a:hover{
 }
 
 .mat-mdc-raised-button.submit-button {
-    background-color: #6A1B9A !important; /* Default Purple */
+    background-color: #00AAFF !important; /* Default Purple */
     color: white !important;
   }
   
   .mat-mdc-raised-button.submit-button:hover {
-    background-color: #7B1FA2 !important; /* Hover Effect */
+    background-color: #006699 !important; /* Hover Effect */
+    color: white !important;
   }
   
   .mat-mdc-raised-button.submit-button:focus {
-    background-color: #9C27B0 !important; /* Focus Effect */
+    background-color: #00AAFF !important; /* Focus Effect */
   }
   
   .mat-mdc-raised-button.submit-button.submit-button:active {
-    background-color: #4A148C !important; /* Active Effect */
+    background-color: #0086cb !important; /* Active Effect */
   }
   
   .mat-mdc-raised-button.back-button {
-    background-color: #6D6D6D !important; /* Default Gray */
+    background-color: #0088CC !important; /* Default Gray */
     color: white !important;
   }
   
   .mat-mdc-raised-button.back-button:hover {
-    background-color: #5C5C5C !important; /* Hover Effect */
+    background-color: #00AAFF !important; /* Hover Effect */
   }
   
   .mat-mdc-raised-button.back-button:focus {
-    background-color: #4F4F4F !important; /* Focus Effect */
+    background-color: #0088CC !important; /* Focus Effect */
   }
   
   .mat-mdc-raised-button.back-button:active {
-    background-color: #3E3E3E !important; /* Active Effect */
+    background-color: #0086cb !important; /* Active Effect */
   }
   
   .toolbar, .second-header-area {
@@ -115,11 +116,11 @@ a:hover{
   
   /* Scrollbar Thumb (the moving part) */
   ::-webkit-scrollbar-thumb {
-    background: #6a0dad; /* Purple thumb */
+    background: #2196f3; /* Purple thumb */
     border-radius: 10px;
   }
   
   /* Hover effect on Scrollbar */
   ::-webkit-scrollbar-thumb:hover {
-  background: #5a0099; /* Darker purple on hover */
+  background: #2196f3; /* Darker purple on hover */
 }
