@@ -54,7 +54,28 @@ const routes: Routes = [
     component: LayoutComponent,
     loadChildren: () => import('./products/true-stain-multi-fluor-buffer/true-stain-multi-fluor-buffer-routing.module').then(m => m.TrueStainMultiFlourBufferRoutingModule),
     data: { breadcrumb: 'TotalSeq' }
-  }
+  },
+  {
+  path: 'products/product-type/reagents',
+  component: LayoutComponent,
+  loadChildren: () => import('./products/reagents/reagents-routing.module').then(m => m.ReagentsRoutingModule),
+  data: { breadcrumb: 'TotalSeq' }
+},
+{
+  path: 'about-us/our-company',
+  component: LayoutComponent,
+  loadChildren: () => import('./about-us/our-company/our-company-routing.module').then(m => m.OurComapnyRoutingModule)
+},
+{
+  path: 'about-us/blogs-videos',
+  component: LayoutComponent,
+  loadChildren: () => import('./about-us/blogs-videos/blogs-videos-routing.module').then(m => m.BlogsVideosRoutingModule)
+},
+{
+  path: 'contact-us',
+  component: LayoutComponent,
+  loadChildren: () => import('./contact-us/contact-us-routing.module').then(m => m.ContactUsRoutingModule)
+},
 ];
 
 

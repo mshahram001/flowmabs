@@ -78,100 +78,25 @@ export class HeaderComponent {
         {
           label: 'Product Type',
           submenu: [
-            { label: 'Reagents', link: '/products/reagents' },
-            { label: 'Kits', link: '/products/kits' },
-            { label: 'Assays', link: '/products/assays' }
+            { label: 'Reagents', link: '/products/product-type/reagents' },
           ]
         },
-        {
-          label: 'Application',
-          submenu: [
-            { label: 'Flow Cytometry', link: '/products/flow-cytometry' },
-            { label: 'Western Blot', link: '/products/western-blot' },
-            { label: 'PCR', link: '/products/pcr' }
-          ]
-        },
-        {
-          label: 'Research Area',
-          submenu: [
-            { label: 'Cancer Research', link: '/products/cancer-research' },
-            { label: 'Immunology', link: '/products/immunology' },
-            { label: 'Neuroscience', link: '/products/neuroscience' }
-          ]
-        }
       ]
     },
-    // {
-    //   label: 'Learn',
-    //   submenu: [
-    //     { label: 'Areas of Research', submenu: [
-    //       { label: 'Immunology', link: '/learn/immunology' },
-    //       { label: 'Cancer', link: '/learn/cancer' },
-    //       { label: 'Stem Cells', link: '/learn/stem-cells' },
-    //       { label: 'Neuroscience', link: '/learn/neuroscience' },
-    //       { label: 'SARS-CoV-2', link: '/learn/sars-cov-2' }
-    //     ]},
-    //     { label: 'Cell Biology', link: '/learn/cell-biology' },
-    //     { label: 'Phenotyping', submenu: [
-    //       { label: 'Cell Types', link: '/learn/phenotyping/cell-types' },
-    //       { label: 'Cell Markers', link: '/learn/phenotyping/cell-markers' }
-    //     ]}
-    //   ]
-    // },
     {
       label: 'Support',
       submenu: [
-        { label: 'Product Support', submenu: [
-          { label: 'Protocols', link: '/support/protocols' },
-          { label: 'FAQs', link: '/support/faqs' },
-          { label: 'CoA Lookup Tools', link: '/support/coa-lookup' },
-          { label: 'Safety Datasheets', link: '/support/safety-datasheets' }
-        ]},
-        { label: 'Order Support', submenu: [
-          { label: 'Quick Order', link: '/support/quick-order' },
-          { label: 'Worldwide Ordering', link: '/support/worldwide-ordering' },
-          { label: 'Track Order', link: '/support/track-order' }
-        ]},
-        { label: 'Flow Cytometry Tools', submenu: [
-          { label: 'Spectra Analyzers', link: '/support/flow-cytometry/spectra-analyzers' },
-          { label: 'Panel Builders', link: '/support/flow-cytometry/panel-builders' }
-        ]},
-        { label: 'Literature, Pathways, & Supporters', link: '/support/literature' }
+        { label: 'Product Support' },
       ]
     },
-    // {
-    //   label: 'Quality',
-    //   submenu: [
-    //     { label: 'Quality Assurance & Certificates', link: '/quality/assurance' },
-    //     { label: 'Product Development', link: '/quality/development' },
-    //     { label: 'Quality Control', link: '/quality/control' }
-    //   ]
-    // },
     {
       label: 'About Us',
       submenu: [
-        { label: 'Our Company', link: '/about/company' },
-        { label: 'Corporate Social Responsibility', submenu: [
-          { label: 'Environmental Sustainability', link: '/about/csr/environment' },
-          { label: 'Our People', link: '/about/csr/people' },
-          { label: 'Giving', link: '/about/csr/giving' },
-          { label: 'Governance', link: '/about/csr/governance' }
-        ]},
-        { label: 'Careers', link: '/about/careers' },
-        { label: 'Promotions', link: '/about/promotions' },
-        { label: 'News and Events', link: '/about/news' },
-        { label: 'Blogs and Videos', link: '/about/blogs-videos' }
+        { label: 'Our Company', link: '/about-us/our-company' },
+        { label: 'Blogs and Videos', link: '/about-us/blogs-videos' }
       ]
     },
-    // {
-    //   label: 'Custom Solutions',
-    //   submenu: [
-    //     { label: 'Custom Reagents', link: '/custom/reagents' },
-    //     { label: 'Custom Services', link: '/custom/services' },
-    //     { label: 'Custom Requests Form', link: '/custom/requests' }
-    //   ]
-    // },
-    { label: 'Contact Us', link: '/contact' }
+    { label: 'Contact Us', link: '/contact-us' }
   ];
   
 

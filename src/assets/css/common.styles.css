@@ -8,6 +8,12 @@ body {
     margin: 20px;
   }
 
+  .container-fluid{
+    min-height: 500px;
+    margin-right: 25px !important;  
+    margin-left: 25px !important;
+  }
+
   .container-fluid div{
     font-size: 13px;
   }
@@ -15,6 +21,10 @@ body {
   .container-fluid table th td{
     font-size: 13px;
   }
+
+.button-icon{
+  padding-right: 4px;
+}
 
 .SubHead{
     border-bottom: 1px solid black;
@@ -56,6 +66,7 @@ a:hover{
 .mat-mdc-raised-button.submit-button {
     background-color: #00AAFF !important; /* Default Purple */
     color: white !important;
+    font-weight: normal !important;
   }
   
   .mat-mdc-raised-button.submit-button:hover {
@@ -74,6 +85,7 @@ a:hover{
   .mat-mdc-raised-button.back-button {
     background-color: #0088CC !important; /* Default Gray */
     color: white !important;
+    font-weight: normal !important;
   }
   
   .mat-mdc-raised-button.back-button:hover {

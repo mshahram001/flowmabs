@@ -1,0 +1,13 @@
+.ourcompany-header{
+    width: 100%;
+    /* max-width: 1170px; */
+    text-align: left;
+    padding: 3em 4em;
+    min-height: 200px !important;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    background: url('/assets/images/company-image.jpeg') center/cover no-repeat;
+    color: white;
+    image-rendering: inherit;
+}

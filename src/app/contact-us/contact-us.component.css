@@ -1,0 +1,43 @@
+.contact-container {
+    background: url('/assets/images/public.avif') center/cover no-repeat;
+    color: white;
+    padding: 4rem;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .contact-overlay {
+    max-width: 600px;
+  }
+  
+  .contact-subheading {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .title-underline {
+    border: none;
+    height: 4px;
+    background-color: #005f73;
+    width: 93%;
+    margin: 5px 0px 20px 0px;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+  }
+  

@@ -1,31 +1,39 @@
 <mat-toolbar color="primary" class="toolbar">
     <div class="header-area">
+
         <div class="left-header-area">
             <ng-container *ngFor="let menuItem of menuData">
-                <button mat-button [matMenuTriggerFor]="menu">
-                    {{ menuItem.label }}
-                </button>
-
-                <mat-menu #menu="matMenu">
-                    <ng-container *ngFor="let subItem of menuItem.submenu">
-                        <ng-container *ngIf="subItem.submenu; else singleItem">
-                            <button mat-menu-item [matMenuTriggerFor]="subMenu">
-                                {{ subItem.label }}
-                            </button>
-                            <mat-menu #subMenu="matMenu">
-                                <button mat-menu-item *ngFor="let subSubItem of subItem.submenu"
-                                    [routerLink]="subSubItem.link">
-                                    {{ subSubItem.label }}
-                                </button>
-                            </mat-menu>
-                        </ng-container>
-                        <ng-template #singleItem>
-                            <button mat-menu-item [routerLink]="subItem.link">{{ subItem.label }}</button>
-                        </ng-template>
+              <!-- If item has submenu -->
+              <ng-container *ngIf="menuItem.submenu; else noSubmenu">
+                <button mat-button [matMenuTriggerFor]="menuItemMenu">{{ menuItem.label }}</button>
+          
+                <mat-menu #menuItemMenu="matMenu">
+                  <ng-container *ngFor="let subItem of menuItem.submenu">
+                    <ng-container *ngIf="subItem.submenu; else subItemOnly">
+                      <button mat-menu-item [matMenuTriggerFor]="subItemMenu">{{ subItem.label }}</button>
+                      <mat-menu #subItemMenu="matMenu">
+                        <button mat-menu-item *ngFor="let subSubItem of subItem.submenu"
+                                [routerLink]="subSubItem.link">
+                          {{ subSubItem.label }}
+                        </button>
+                      </mat-menu>
                     </ng-container>
+          
+                    <ng-template #subItemOnly>
+                      <button mat-menu-item [routerLink]="subItem.link">
+                        {{ subItem.label }}
+                      </button>
+                    </ng-template>
+                  </ng-container>
                 </mat-menu>
+              </ng-container>
+          
+              <!-- If top-level item has no submenu (like 'Contact Us') -->
+              <ng-template #noSubmenu>
+                <button mat-button [routerLink]="menuItem.link">{{ menuItem.label }}</button>
+              </ng-template>
             </ng-container>
-        </div>
+          </div>
 
         <div class="right-header-area">
             <button mat-button type="button" (click)="openLoginDialog()">
