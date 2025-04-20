@@ -23,7 +23,6 @@ import { HeaderComponent , LoginDialogComponent, MyCartDialogComponent} from './
 import { MatDialogModule } from '@angular/material/dialog';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +49,6 @@ import { SharedModule } from './shared/shared.module';
     MatAutocompleteModule,
     CommonModule,
     MatCardModule,
-    SharedModule
   ],
   providers: [
     provideAnimationsAsync()

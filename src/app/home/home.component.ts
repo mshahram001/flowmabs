@@ -73,11 +73,12 @@ export class HomeComponent {
   hoveredItem: any = null;
 
   categories = [
-    { name: 'IMMUNOLOGY', image: 'https://t4.ftcdn.net/jpg/02/35/71/13/360_F_235711378_x8BsTR14c7Iu9myWbXVBk2DHf7dHsdgg.jpg', description: 'Study of immune system responses.' },
-    { name: 'STEM CELLS', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSge8I0y5PIOPwQ-6AptkAUqbPTCVqHJVncDCyT6PxdD9qn9_xdOpBp15W8C6pSoIwETAs&usqp=CAU', description: 'Research on regenerative medicine.' },
-    { name: 'ONCOLOGY', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKuld-PE7BMxlOl5-cjvNAfAtIJCTbkQIJJNu6fnJzLtMwk-q8exoTPEK3aqWsdw5huMs&usqp=CAU', description: 'Exploring cancer treatments and therapies.' },
-    { name: 'NEUROSCIENCE', image: 'https://static.vecteezy.com/system/resources/previews/023/042/077/non_2x/human-cell-biology-dna-strands-molecular-structure-illustration-generate-ai-free-photo.jpg', description: 'Understanding the nervous system.' },
-    { name: 'CLINICAL', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkmreKNgg2vExUi5AntmHvbHGSH48qM4XI4iy-K6zIWfshqBEhAlMedpP9hwPFieTN-Hs&usqp=CAU', description: 'Medical trials and patient care studies.' }
+    { name: 'Robust Quality Control', image: '/assets/images/public.avif', description: 'Each antibody undergoes meticulous testing to ensure high specificity and reliability, allowing you to trust your experimental outcomes.' },
+    { name: 'Intuitive Antibody Finder', image: '/assets/images/public.avif', description: 'REffortlessly navigate our extensive catalog to find the perfect monoclonal antibodies that meet your specific research requirements.' },
+    { name: 'Comprehensive Support', image: '/assets/images/public.avif', description: 'Our dedicated support team is here to guide you through product selection and application, ensuring you maximize your research potential.' },
+    { name: 'Tailored Solutions', image: '/assets/images/public.avif', description: 'Choose from a variety of isotype controls tailored to enhance the accuracy of your experiments, ensuring optimal performance in your assays.' },
+    { name: 'Building a Research Community', image: '/assets/images/public.avif', description: 'Join our network of researchers and stay informed about the latest developments and best practices in monoclonal antibody research.' },
+    { name: 'Sustainable Practices', image: '/assets/images/public.avif', description: 'We prioritize eco-friendly methods in our operations, aligning with the needs of modern scientific research while reducing our environmental footprint.' }
   ];
 
 }

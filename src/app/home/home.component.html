@@ -1,9 +1,63 @@
 <mat-card>
-<div class="home-page-section1">
+  <div class="hero">
+    <div class="section-box">
+      <div class="subtitle">Explore Flow Mabs</div>
+      <div class="title">Precision Monoclonal Antibodies for Flow Cytometry</div>
+      <div class="desc">
+        Discover our extensive range of verified monoclonal antibodies meticulously tailored for flow cytometry and
+        immunofluorescence applications. Each product undergoes rigorous cross-reactivity checks and comes with unique
+        negative isotype controls, ensuring reliable and accurate results for your research needs.
+      </div>
+      <a href="#" class="btn">Contact Us for Expert Guidance</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="image-section">
+      <img src="/assets/images/home-verified.avif" alt="Flow Cytometry CLPD Panel Test" />
+      <div class="verified-box">
+        <h2>Verified</h2>
+        <p>Monoclonal Antibodies</p>
+      </div>
+    </div>
+    <div class="content-section">
+      <h4>Discover Flow Mabs</h4>
+      <h1>
+        Exceptional Monoclonal Antibodies<br>
+        <span>for Your Research</span>
+      </h1>
+      <p>
+        Unlock the power of precise research with our meticulously validated monoclonal antibodies, expertly designed
+        for flow cytometry and immunofluorescence. Each antibody is rigorously tested for cross-reactivity and delivered
+        with unique negative isotype controls, ensuring your experiments yield accurate and reliable results.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon"><i class="fa-solid fa-check-circle"></i></div>
+          <div class="feature-content">
+            <h3>Quality Assurance</h3>
+            <p>Our antibodies undergo stringent testing for high specificity and consistency.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="feature-content">
+            <h3>Tailored Solutions</h3>
+            <p>Utilize our intuitive Antibody Finder to match your specific research needs effortlessly.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn">Reach Out for Personalized Support</a>
+    </div>
+  </div>
+
+  <!-- <div class="home-page-section1">
     <div class="row">
       <div class="col-xs-12 col-lg-3 col-md-3 col-sm-6" *ngFor="let item of headingName" [routerLink]="item.link">
         <div class="section-content">
-          <div class="title-container" >
+          <div class="title-container">
             <h1>{{item.heading}}</h1>
           </div>
           <div class="content-container">
@@ -12,17 +66,20 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="paragraph-text table-responsive">
-    <h2>Research Areas</h2>
-  </div>
+  <section class="research-section">
+    <div class="container">
+      <h4>OPTIMIZE YOUR RESEARCH WITH FLOW MABS</h4>
+      <p>
+        Elevate your research outcomes with our rigorously validated monoclonal antibodies, expertly crafted for flow cytometry and immunofluorescence applications. Each product is equipped with comprehensive cross-reactivity data and a unique negative isotype control, empowering you to achieve accurate and reproducible results.
+      </p>
+    </div>
+  </section>
 
   <div class="category-container">
-    <div class="category-item" *ngFor="let item of categories"
-         [ngClass]="{'expanded': hoveredItem === item}"
-         (mouseenter)="hoveredItem = item"
-         (mouseleave)="hoveredItem = null">
+    <div class="category-item" *ngFor="let item of categories" [ngClass]="{'expanded': hoveredItem === item}"
+      (mouseenter)="hoveredItem = item" (mouseleave)="hoveredItem = null">
 
       <!-- Image -->
       <img [src]="item.image" alt="{{ item.name }}">
@@ -36,11 +93,33 @@
       <div class="content-box" *ngIf="hoveredItem === item">
         <h2>{{ item.name }}</h2>
         <p>{{ item.description }}</p>
-        <button class="learn-more">LEARN MORE</button>
       </div>
 
     </div>
   </div>
+
+  <section class="collection-section">
+    <div class="container-section">
+      <p class="subtitle">Visualize Excellence with Flow Mabs</p>
+      <h2>Our Monoclonal Antibody Collection</h2>
+      <p class="description">
+        Explore our curated gallery showcasing the high-quality monoclonal antibodies specifically validated for flow cytometry and immunofluorescence. Each product is meticulously designed to meet rigorous standards, ensuring reliability and accuracy in your research endeavors.
+      </p>
+      <p class="description">
+        Our unique negative isotype controls are included with each antibody, providing you with the tools necessary to enhance your experimental outcomes. View our collection and discover the precision that Flow mAbs brings to your scientific investigations.
+      </p>
+      <a href="#" class="cta-button">Browse Our Antibody Catalog</a>
+  
+      <div class="image-grid">
+        <img src="/assets/images/image1.webp" alt="Microscope">
+        <img src="/assets/images/image2.avif" alt="Automated Lab System">
+        <img src="/assets/images/image3.avif" alt="Flow Cytometry Tube">
+        <img src="/assets/images/image4.avif" alt="Antibodies Graphic">
+        <img src="/assets/images/image5.webp" alt="Antibody Structure">
+        <img src="/assets/images/image6.avif" alt="Cell Interaction">
+      </div>
+    </div>
+  </section>
 
 
 

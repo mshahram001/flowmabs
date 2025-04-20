@@ -41,25 +41,21 @@ const routes: Routes = [
     path: 'home/totalseq',
     component: LayoutComponent,
     loadChildren: () => import('./content-pages/totalseq/totalseq-routing.module').then(m => m.TotalSeqRoutingModule),
-    data: { breadcrumb: 'TotalSeq' }
   },
   {
     path: 'products/cellular-senescence-kit-red',
     component: LayoutComponent,
     loadChildren: () => import('./products/cellular-senescence-kit-red/cellular-senescence-kit-red-routing.module').then(m => m.CellularSenescenceKitRoutingModule),
-    data: { breadcrumb: 'TotalSeq' }
   },
   {
     path: 'products/true-stain-multi-flour-buffer',
     component: LayoutComponent,
     loadChildren: () => import('./products/true-stain-multi-fluor-buffer/true-stain-multi-fluor-buffer-routing.module').then(m => m.TrueStainMultiFlourBufferRoutingModule),
-    data: { breadcrumb: 'TotalSeq' }
   },
   {
   path: 'products/product-type/reagents',
   component: LayoutComponent,
   loadChildren: () => import('./products/reagents/reagents-routing.module').then(m => m.ReagentsRoutingModule),
-  data: { breadcrumb: 'TotalSeq' }
 },
 {
   path: 'about-us/our-company',
